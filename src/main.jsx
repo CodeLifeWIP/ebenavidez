@@ -1,18 +1,22 @@
-import React from 'react'
 import ReactDOM from 'react-dom/client'
-import { BrowserRouter, Routes, Route } from 'react-router-dom'
+import { Provider } from 'react-redux'
+import { PayPalScriptProvider } from '@paypal/react-paypal-js'
+import store from './store/index'
 import App from '@/App'
-import Home from '@/views/Home.jsx'
 import '@/assets/main.css'
 
+
+
+const initialOptions = {
+  'client-id': 'AZqqiK3XwigCr8530Tv7vdOCQYG1QF3tXZbA4B9_g212MmHx-jP47tnhQAzRYabFiZgPwyKOq0vd8UAz',
+  currency: 'PHP',
+  intent: 'capture',
+}
+
 ReactDOM.createRoot(document.getElementById('root')).render(
-  <React.StrictMode>
-    <BrowserRouter>
-      <Routes>
-        <Route path="/" element={<App />}>
-          <Route index element={<Home />} />
-        </Route>
-      </Routes>
-    </BrowserRouter>
-  </React.StrictMode>,
+  <Provider store={store}>
+    <PayPalScriptProvider options={initialOptions}>
+      <App />
+    </PayPalScriptProvider>
+  </Provider>,
 )

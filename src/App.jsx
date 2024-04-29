@@ -1,8 +1,9 @@
-import { Outlet } from 'react-router-dom'
+import { RouterProvider } from 'react-router-dom'
+import Router from './routes/Router'
 
 function App() {
   return (
-    <Outlet />
+    <RouterProvider router={Router} />
   )
 }
 
