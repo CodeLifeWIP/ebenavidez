@@ -19,7 +19,7 @@ const TableContents = ({ className }) => {
 
   return (
     <div className={`${className}`}>
-      <ul className="my-24 mx-8 lg:my-24 lg:mx-24 xl:ml-44">
+      <ul className="">
         {info.map((i) => {
           return <li key={i.toString()} className={'mb-3 ' + (active === i ? 'text-teal-300' : 'text-slate-400')}>
             <button onClick={() => onClickHandler(i)}>{i}</button>
@@ -31,15 +31,3 @@ const TableContents = ({ className }) => {
 }
 
 export default TableContents
-
-// return (
-//   <div className={`${className}`}>
-//     <ul className="my-24 mx-40">
-//       {info.map((i) => {
-//         return <li key={i.toString()} className={'mb-3 ' + (active === i ? 'text-teal-300' : 'text-slate-400')}>
-//           <button onClick={() => onClickHandler(i)}>{i}</button>
-//         </li>
-//       })}
-//     </ul>
-//   </div>
-// )

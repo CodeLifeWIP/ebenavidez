@@ -8,13 +8,13 @@ import { useEffect, useRef } from 'react'
 import { useMediaQuery } from 'react-responsive'
 
 
-const Products = (props) => {
+const Products = ({ data, className }) => {
   const dispatch = useDispatch()
   const cartItems = useSelector((state) => state.cart.items)
   const cartTotalAmount = useSelector((state) => state.cart.cartTotalAmount)
   const cartTotalQuantity = useSelector((state) => state.cart.cartTotalQuantity)
 
-  const info = props.data
+  const info = data
   const totalValue = useRef(0)
 
   const sm = useMediaQuery({ query: '(min-width: 640px)' })
@@ -63,10 +63,10 @@ const Products = (props) => {
   const titelBarWithCheckout = <StickyTitleCart title='Products' cartTotal={cartTotalQuantity} checkoutButton={checkoutButton} />
 
   return (
-    <div className={`mx-6 text-white lg:my-24 lg:ml-6 lg:mr-24 xl:my-24 xl:ml-2 xl:mr-44 ${props.className}`}>
+    <div className={`xl:px-4 ${className}`}>
       {((cartTotalQuantity && sm) && (!lg && !xl)) ? titelBarWithCheckout : titelBarDefault}
 
-      <ul className='text-white mb-16 sm:flex sm:mb-0 sm:my-4 sm:py-4 '>
+      <ul className='text-white mb-16 sm:flex sm:mb-0 sm:my-4 sm:py-4'>
         {info.map((i, index) =>
           <li key={index}
             className={'my-8 px-8 py-6 sm:px-4 sm:py-4 md:mt-0 md:mb-8 md:px-8 md:py-6 lg:mx-0 lg:my-0 group hover:bg-cyan-900/20 rounded'}

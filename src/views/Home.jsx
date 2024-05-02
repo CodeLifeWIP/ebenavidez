@@ -114,41 +114,35 @@ const Home = () => {
 
   useEffect(() => {
     // secondaryCursor.current.style.transform = `translate3d(${mousePos.x - 200}px, ${mousePos.y}px, 0)`
+
+    /* <div ref={secondaryCursor} className='w-36 h-36 bg-blue-500 blur-extra float-start' />
+      <div ref={secondaryCursor} className='w-36 h-36 bg-indigo-600 blur-extra float-start' /> */
   }, [mousePos])
 
+  const lgPageLayout = 'lg:flex lg:justify-between lg:h-screen lg:overflow-y-hidden lg:w-full lg:grid lg:grid-cols-2'
+  const leftPageMargin = 'mx-6 my-10 md:mx-16 md:my-20 lg:mr-0 lg:ml-24 lg:mt-24 xl:ml-40 xl:mt-40'
+  const rightPageMargin = 'mx-6 my-10 md:mx-16 md:my-20 lg:ml-0 lg:mr-24 lg:mt-24 xl:mr-40 xl:mt-40'
+
+
   return (
-    <div className='bg-slate-900 lg:flex lg:justify-between lg:h-screen lg:overflow-y-hidden lg:w-full lg:grid lg:grid-cols-2'>
+
+    <div className={`bg-slate-900  ${lgPageLayout}`}>
       <div className="">
-        <Hero />
-        <TableContents className='hidden lg:block' />
+        <Hero className={`mb-32 sm:mb-52 md:mb-40 lg:mb-0 ${leftPageMargin}`} />
+        <TableContents className={`hidden lg:block ${leftPageMargin}`} />
       </div>
       <div className="lg:h-screen lg:overflow-y-auto">
-        <About />
-        <Experience data={experiences} />
-        <Project data={projects} />
-        <Products data={products} className='hidden lg:block' />
-        <Footer className='hidden lg:block' />
+        <About className={rightPageMargin} />
+        <Experience data={experiences} className={rightPageMargin} />
+        <Project data={projects} className={rightPageMargin} />
+        <Products data={products} className={`hidden lg:block ${rightPageMargin}`} />
+        <Footer className={`hidden lg:block ${rightPageMargin}`} />
       </div>
-      <Products data={products} className='block lg:hidden' />
-      <Footer className='block lg:hidden' />
+      <Products data={products} className={`block lg:hidden ${rightPageMargin}`} />
+      <Footer className={`block lg:hidden ${rightPageMargin}`} />
 
     </div>
   )
 }
 
 export default Home
-
-// return (
-//   <div className='bg-slate-900 flex justify-between h-screen overflow-y-hidden w-full grid grid-cols-2'>
-//     {/* <div ref={secondaryCursor} className='w-36 h-36 bg-blue-500 blur-extra float-start' />
-//       <div ref={secondaryCursor} className='w-36 h-36 bg-indigo-600 blur-extra float-start' /> */}
-//     <div className="">
-//       <Hero />
-//       <TableContents />
-//     </div>
-//     <div className="h-screen overflow-y-auto">
-//       <About />
-//       <Experience info={experiences} />
-//     </div>
-//   </div>
-// )
