@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react'
+import { useState, useEffect, useRef } from 'react'
 import Hero from '../components/home/Hero'
 import TableContents from '../components/home/TableContents'
 import { useSelector } from 'react-redux'
@@ -86,7 +86,7 @@ const Home = () => {
   const [mousePos, setMousePos] = useState({})
   const active = useSelector((state) => state.tableContents.active)
   const cartTotalAmount = useSelector((state) => state.cart.cartTotalAmount)
-  // const secondaryCursor = useRef(null)
+  const secondaryCursor = useRef(null)
 
 
   useEffect(() => {
@@ -113,34 +113,34 @@ const Home = () => {
   })
 
   useEffect(() => {
-    // secondaryCursor.current.style.transform = `translate3d(${mousePos.x - 200}px, ${mousePos.y}px, 0)`
-
-    /* <div ref={secondaryCursor} className='w-36 h-36 bg-blue-500 blur-extra float-start' />
-      <div ref={secondaryCursor} className='w-36 h-36 bg-indigo-600 blur-extra float-start' /> */
+    secondaryCursor.current.style.transform = `translate3d(${mousePos.x - 200}px, ${mousePos.y}px, 0)`
   }, [mousePos])
 
   const lgPageLayout = 'lg:flex lg:justify-between lg:h-screen lg:overflow-y-hidden lg:w-full lg:grid lg:grid-cols-2'
-  const leftPageMargin = 'mx-6 my-10 md:mx-16 md:my-20 lg:mr-0 lg:ml-24 lg:mt-24 xl:ml-40 xl:mt-40'
-  const rightPageMargin = 'mx-6 my-10 md:mx-16 md:my-20 lg:ml-0 lg:mr-24 lg:mt-24 xl:mr-40 xl:mt-40'
+  const leftPageMargin = 'mx-6 my-10 md:mx-16 md:my-20 lg:mr-0 lg:ml-24 lg:mt-24 xl:ml-40 xl:mt-28'
+  const rightPageMargin = 'mx-6 my-10 md:mx-16 md:my-20 lg:ml-0 lg:mr-24 lg:mt-24 xl:mr-40 xl:mt-28'
 
 
   return (
+    <div className='bg-slate-900 xl:h-screen xl:relative xl:z-0 xl:flex'>
+      <div ref={secondaryCursor} className='hidden xl:block w-36 h-36 bg-blue-500 blur-extra' />
+      <div ref={secondaryCursor} className='hidden xl:block w-36 h-36 bg-indigo-600 blur-extra' />
 
-    <div className={`bg-slate-900  ${lgPageLayout}`}>
-      <div className="">
-        <Hero className={`mb-32 sm:mb-52 md:mb-40 lg:mb-0 ${leftPageMargin}`} />
-        <TableContents className={`hidden lg:block ${leftPageMargin}`} />
+      <div className={`xl:absolute xl:z-10 ${lgPageLayout}`}>
+        <div className="">
+          <Hero className={`mb-32 sm:mb-52 md:mb-40 lg:mb-0 ${leftPageMargin}`} />
+          <TableContents className={`hidden lg:block ${leftPageMargin}`} />
+        </div>
+        <div className="lg:h-screen lg:overflow-y-auto">
+          <About className={rightPageMargin} />
+          <Experience data={experiences} className={rightPageMargin} />
+          <Project data={projects} className={rightPageMargin} />
+          <Products data={products} className={`hidden lg:block ${rightPageMargin}`} />
+          <Footer className={`hidden lg:block ${rightPageMargin}`} />
+        </div>
+        <Products data={products} className={`block lg:hidden ${rightPageMargin}`} />
+        <Footer className={`block lg:hidden ${rightPageMargin}`} />
       </div>
-      <div className="lg:h-screen lg:overflow-y-auto">
-        <About className={rightPageMargin} />
-        <Experience data={experiences} className={rightPageMargin} />
-        <Project data={projects} className={rightPageMargin} />
-        <Products data={products} className={`hidden lg:block ${rightPageMargin}`} />
-        <Footer className={`hidden lg:block ${rightPageMargin}`} />
-      </div>
-      <Products data={products} className={`block lg:hidden ${rightPageMargin}`} />
-      <Footer className={`block lg:hidden ${rightPageMargin}`} />
-
     </div>
   )
 }

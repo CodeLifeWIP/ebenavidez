@@ -4,7 +4,7 @@ import { useEffect } from 'react'
 // eslint-disable-next-line react/prop-types
 const StickyTitle = ({ className, title }) => {
   return (
-    <div className={`sticky h-14 my-8 top-0 bg-slate-900/90 flex ${className}`}>
+    <div className={`sticky h-14 my-8 top-0 flex bg-slate-900/90 ${className}`}>
       <span className="text-white text-xl inline-block content-center">{title}</span>
     </div>
   )
@@ -22,7 +22,7 @@ const StickyTitleWithCart = ({ className, title, cartTotal, checkoutButton }) =>
   }, [cartTotal])
 
   return (
-    <div className={`sticky h-14 my-8 top-0 bg-slate-900/90 flex justify-between ${className}`}>
+    <div className={`sticky h-14 my-8 top-0 flex justify-between bg-slate-900/90 xl:bg-transparent ${className}`}>
       <span className="text-white text-xl inline-block content-center">{title}</span>
       <div className="flex">
         <div className="inline-block content-center space-x-2">
