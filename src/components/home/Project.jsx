@@ -13,7 +13,7 @@ const Project = ({ data, className }) => {
   const xxl = useMediaQuery({ query: '(min-width: 1536px)' })
 
 
-  const mobileComponents = <div className={className}>
+  const mobileComponents = <div id='Projects' className={className}>
     <StickyTitle title="Project" />
     <ul>
       {
@@ -43,7 +43,7 @@ const Project = ({ data, className }) => {
     </ul>
   </div>
 
-  const smComponents = <div className={className}>
+  const smComponents = <div id='Projects' className={className}>
     <StickyTitle title="Project" />
     <ul>
       {
@@ -75,7 +75,7 @@ const Project = ({ data, className }) => {
     </ul>
   </div>
 
-  const mdComponents = <div className={className}>
+  const mdComponents = <div id='Projects' className={className}>
     <StickyTitle title="Project" />
     <ul>
       {
@@ -107,12 +107,12 @@ const Project = ({ data, className }) => {
     </ul>
   </div>
 
-  const lgComponents = <div className={className}>
+  const lgComponents = <div id='Projects' className={className}>
     <StickyTitle title="Project" className='lg:hidden' />
     <ul>
       {
         info.map((i) => {
-          return <li key={i.title} className="grid grid-cols-3 my-4 py-4 group" >
+          return <li key={i.title} className="grid grid-cols-3 mb-4 py-4 px-4 group hover:pt-3.5 hover:bg-slate-500/10 hover:border-t-2 hover:border-double hover:border-slate-200/10 hover:rounded-lg" >
             <img className='object-scale-down' src={i.image} alt={'image of ' + i.title} />
             <div className='col-span-2 flex-initial pl-4'>
               <div className='py-2 flex md:py-0 md:pb-1'>
@@ -139,13 +139,12 @@ const Project = ({ data, className }) => {
     </ul>
   </div>
 
-  const xlComponents = <div className={className}>
-    {/* my-24 ml-6 mr-20 xl:my-24 xl:ml-2 xl:mr-40 */}
-    <StickyTitle title="Project" className='lg:hidden' />
+  const xlComponents = <div id='Projects' className={className}>
+    <StickyTitle title="Project" className='xl:hidden' />
     <ul>
       {
         info.map((i) => {
-          return <li key={i.title} className="grid grid-cols-3 my-4 py-4 px-4 group hover:pt-3.5 hover:bg-slate-500/10 hover:border-t-2 hover:border-double hover:border-slate-200/10 hover:rounded-lg" >
+          return <li key={i.title} className="grid grid-cols-3 mb-4 py-4 px-4 group hover:pt-3.5 hover:bg-slate-500/10 hover:border-t-2 hover:border-double hover:border-slate-200/10 hover:rounded-lg" >
             <img className='object-scale-down' src={i.image} alt={'image of ' + i.title} />
             <div className='col-span-2 flex-initial pl-4'>
               <div className='py-2 flex md:py-0 md:pb-1'>

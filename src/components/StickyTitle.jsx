@@ -22,7 +22,7 @@ const StickyTitleWithCart = ({ className, title, cartTotal, checkoutButton }) =>
   }, [cartTotal])
 
   return (
-    <div className={`sticky h-14 my-8 top-0 flex justify-between bg-slate-900/90 xl:bg-transparent ${className}`}>
+    <div className={`sticky h-14 top-0 flex justify-between bg-slate-900/90 xl:bg-transparent ${className}`}>
       <span className="text-white text-xl inline-block content-center">{title}</span>
       <div className="flex">
         <div className="inline-block content-center space-x-2">

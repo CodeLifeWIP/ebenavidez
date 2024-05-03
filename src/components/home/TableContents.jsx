@@ -5,7 +5,7 @@ const info = [
   'About',
   'Experience',
   'Projects',
-  '',
+  'Products',
 ]
 
 // eslint-disable-next-line react/prop-types
@@ -14,6 +14,7 @@ const TableContents = ({ className }) => {
   const dispatch = useDispatch()
 
   const onClickHandler = (value) => {
+    window.location.href = `#${value}`
     dispatch(tableContentsActions.chooseContent(value))
   }
 

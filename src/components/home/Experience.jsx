@@ -13,7 +13,7 @@ const Experience = ({ data, className }) => {
   const xxl = useMediaQuery({ query: '(min-width: 1536px)' })
 
 
-  const mobileComponents = <div className={className}>
+  const mobileComponents = <div id='Experience' className={className}>
     <StickyTitle title="Experience" />
     <ul>
       {
@@ -40,7 +40,7 @@ const Experience = ({ data, className }) => {
     </ul>
   </div>
 
-  const smComponents = <div className={className}>
+  const smComponents = <div id='Experience' className={className}>
     <StickyTitle title="Experience" />
     <ul>
       {
@@ -69,12 +69,12 @@ const Experience = ({ data, className }) => {
     </ul>
   </div>
 
-  const lgComponents = <div className={className}>
+  const lgComponents = <div id='Experience' className={className}>
     <StickyTitle title="Experience" className='lg:hidden' />
     <ul>
       {
         info.map((i) => {
-          return <li key={i.title} className="grid grid-cols-3 my-4 py-4 group" >
+          return <li key={i.title} className="grid grid-cols-3 mb-4 py-4 px-4 group hover:pt-3.5 hover:bg-slate-500/10 hover:border-t-2 hover:border-double hover:border-slate-200/10 hover:rounded-lg" >
             <div className="text-slate-400 text-sm">{i.date}</div>
             <div className="col-span-2">
               <div className='flex'>
@@ -98,12 +98,12 @@ const Experience = ({ data, className }) => {
     </ul>
   </div>
 
-  const xlComponents = <div className={className}>
-    <StickyTitle title="Experience" className='lg:hidden' />
+  const xlComponents = <div id='Experience' className={className}>
+    <StickyTitle title="Experience" className='xl:hidden' />
     <ul>
       {
-        info.map((i) => {
-          return <li key={i.title} className="grid grid-cols-3 my-4 py-4 px-4 group hover:pt-3.5 hover:bg-slate-500/10 hover:border-t-2 hover:border-double hover:border-slate-200/10 hover:rounded-lg" >
+        info.map((i, index) => {
+          return <li key={i.title} className='grid grid-cols-3 mb-4 py-4 px-4 group hover:pt-3.5 hover:bg-slate-500/10 hover:border-t-2 hover:border-double hover:border-slate-200/10 hover:rounded-lg' >
             <div className="text-slate-400 text-sm">{i.date}</div>
             <div className="col-span-2">
               <div className='flex'>

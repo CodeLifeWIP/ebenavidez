@@ -58,12 +58,12 @@ const Products = ({ data, className }) => {
     </button>
   </Link>
 
-  const titelBarDefault = <StickyTitleCart title='Products' cartTotal={cartTotalQuantity} />
+  const titelBarDefault = <StickyTitleCart title='Products' cartTotal={cartTotalQuantity} className='my-8 lg:my-0 xl:my-0' />
 
-  const titelBarWithCheckout = <StickyTitleCart title='Products' cartTotal={cartTotalQuantity} checkoutButton={checkoutButton} />
+  const titelBarWithCheckout = <StickyTitleCart title='Products' cartTotal={cartTotalQuantity} checkoutButton={checkoutButton} className='my-8 lg:my-0 xl:my-0' />
 
   return (
-    <div className={`xl:px-4 ${className}`}>
+    <div id='Products' className={`xl:px-4 ${className}`}>
       {((cartTotalQuantity && sm) && (!lg && !xl)) ? titelBarWithCheckout : titelBarDefault}
 
       <ul className='text-white mb-16 sm:flex sm:mb-0 sm:my-4 sm:py-4'>
