@@ -119,8 +119,6 @@ const Home = () => {
   const lgPageLayout = 'lg:flex lg:justify-between lg:h-screen lg:overflow-y-hidden lg:w-full lg:grid lg:grid-cols-2'
   const leftPageMargin = 'mx-6 my-10 md:mx-16 md:my-20 lg:mr-0 lg:ml-24 lg:mt-24 xl:ml-40 xl:mt-28'
   const rightPageMargin = 'mx-6 my-10 md:mx-16 md:my-20 lg:ml-0 lg:mr-24 lg:my-0 lg:pt-24 xl:mr-40 xl:my-0 xl:pt-28'
-  // const rightPageMargin = 'mx-6 my-10 md:mx-16 md:my-20 lg:ml-0 lg:mr-24 lg:mt-24 xl:mr-40 xl:mt-28'
-
 
   return (
     <div className='bg-slate-900 xl:h-screen xl:relative xl:z-0 xl:flex'>

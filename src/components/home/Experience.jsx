@@ -102,7 +102,7 @@ const Experience = ({ data, className }) => {
     <StickyTitle title="Experience" className='xl:hidden' />
     <ul>
       {
-        info.map((i, index) => {
+        info.map((i) => {
           return <li key={i.title} className='grid grid-cols-3 mb-4 py-4 px-4 group hover:pt-3.5 hover:bg-slate-500/10 hover:border-t-2 hover:border-double hover:border-slate-200/10 hover:rounded-lg' >
             <div className="text-slate-400 text-sm">{i.date}</div>
             <div className="col-span-2">
