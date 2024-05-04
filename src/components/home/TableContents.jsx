@@ -7,7 +7,7 @@ const info = [
   'About',
   'Experience',
   'Projects',
-  'Products',
+  // 'Products',
 ]
 
 // eslint-disable-next-line react/prop-types

@@ -134,10 +134,10 @@ const Home = () => {
           <About className={rightPageMargin} />
           <Experience data={experiences} className={rightPageMargin} />
           <Project data={projects} className={rightPageMargin} />
-          <Products data={products} className={`hidden lg:block ${rightPageMargin}`} />
+          {/* <Products data={products} className={`hidden lg:block ${rightPageMargin}`} /> */}
           <Footer className={`hidden lg:block ${rightPageMargin}`} />
         </div>
-        <Products data={products} className={`block lg:hidden ${rightPageMargin}`} />
+        {/* <Products data={products} className={`block lg:hidden ${rightPageMargin}`} /> */}
         <Footer className={`block lg:hidden ${rightPageMargin}`} />
       </div>
     </div>
