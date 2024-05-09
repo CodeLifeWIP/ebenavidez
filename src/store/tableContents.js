@@ -2,12 +2,15 @@ import { createSlice } from '@reduxjs/toolkit'
 
 const tableContentsSlice = createSlice({
   name: 'tableContents',
-  initialState: { active: 'none' },
+  initialState: { active: 'none', isManuallyScrolling: false },
   reducers: {
     chooseContent(state, action) {
       const chosen = action.payload
       state.active = chosen
-      // console.log(`state: ${state.active}, action: ${chosen}`)
+    },
+    setIsManuallyScrolling(state, action) {
+      const isManuallyScrolling = action.payload
+      state.isManuallyScrolling = isManuallyScrolling
     },
   },
 })

@@ -24,13 +24,6 @@ const Products = ({ data, className }) => {
   const xxl = useMediaQuery({ query: '(min-width: 1536px)' })
 
   useEffect(() => {
-    console.log(`sm: ${sm}`)
-    console.log(`md: ${md}`)
-    console.log(`lg: ${lg}`)
-
-  }, [])
-
-  useEffect(() => {
     totalValue.current = cartTotalAmount
   }, [cartTotalAmount, cartTotalQuantity])
 

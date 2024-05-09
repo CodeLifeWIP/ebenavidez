@@ -17,8 +17,8 @@ const Project = ({ data, className }) => {
     <StickyTitle title="Project" />
     <ul>
       {
-        info.map((i) => {
-          return <li key={i.title} className="mb-4 pb-4 xl:hover:bg-cyan-900/20" >
+        info.map((i, index) => {
+          return <li key={i.title + index} className="mb-4 pb-4 xl:hover:bg-cyan-900/20" >
             <img src={i.image} alt={'image of ' + i.title} />
             <div className='py-2 flex group'>
               <a href='https://google.com' className="text-white text-base group-hover:text-teal-300">{i.title}</a>
@@ -47,8 +47,8 @@ const Project = ({ data, className }) => {
     <StickyTitle title="Project" />
     <ul>
       {
-        info.map((i) => {
-          return <li key={i.title} className="mb-4 pb-4 xl:hover:bg-cyan-900/20 sm:flex sm:mb-0 sm:my-4 sm:py-4" >
+        info.map((i, index) => {
+          return <li key={i.title + index} className="mb-4 pb-4 xl:hover:bg-cyan-900/20 sm:flex sm:mb-0 sm:my-4 sm:py-4" >
             <img className='sm:flex-none sm:object-scale-down sm:h-28' src={i.image} alt={'image of ' + i.title} />
             <div className='sm:block sm:flex-initial sm:pl-8'>
               <div className='py-2 flex group sm:py-0 sm:pb-1'>
@@ -79,8 +79,8 @@ const Project = ({ data, className }) => {
     <StickyTitle title="Project" />
     <ul>
       {
-        info.map((i) => {
-          return <li key={i.title} className="md:flex md:my-4 md:py-4" >
+        info.map((i, index) => {
+          return <li key={i.title + index} className="md:flex md:my-4 md:py-4" >
             <img className='md:flex-none md:object-scale-down md:h-52' src={i.image} alt={'image of ' + i.title} />
             <div className='md:block md:flex-initial md:pl-8'>
               <div className='py-2 flex group md:py-0 md:pb-1'>
@@ -111,8 +111,8 @@ const Project = ({ data, className }) => {
     <StickyTitle title="Project" className='lg:hidden' />
     <ul>
       {
-        info.map((i) => {
-          return <li key={i.title} className="grid grid-cols-3 mb-4 py-4 px-4 group hover:pt-3.5 hover:bg-slate-500/10 hover:border-t-2 hover:border-double hover:border-slate-200/10 hover:rounded-lg" >
+        info.map((i, index) => {
+          return <li key={i.title + index} className="grid grid-cols-3 mb-4 py-4 px-4 group hover:pt-3.5 hover:bg-slate-500/10 hover:border-t-2 hover:border-double hover:border-slate-200/10 hover:rounded-lg" >
             <img className='object-scale-down' src={i.image} alt={'image of ' + i.title} />
             <div className='col-span-2 flex-initial pl-4'>
               <div className='py-2 flex md:py-0 md:pb-1'>
@@ -143,8 +143,8 @@ const Project = ({ data, className }) => {
     <StickyTitle title="Project" className='xl:hidden' />
     <ul>
       {
-        info.map((i) => {
-          return <li key={i.title} className="grid grid-cols-3 mb-4 py-4 px-4 group hover:pt-3.5 hover:bg-slate-500/10 hover:border-t-2 hover:border-double hover:border-slate-200/10 hover:rounded-lg" >
+        info.map((i, index) => {
+          return <li key={i.title + index} className="grid grid-cols-3 mb-4 py-4 px-4 group hover:pt-3.5 hover:bg-slate-500/10 hover:border-t-2 hover:border-double hover:border-slate-200/10 hover:rounded-lg" >
             <img className='object-scale-down' src={i.image} alt={'image of ' + i.title} />
             <div className='col-span-2 flex-initial pl-4'>
               <div className='py-2 flex md:py-0 md:pb-1'>

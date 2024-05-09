@@ -4,7 +4,7 @@ const ItemCounter = ({ addItemHandler, removeItemHandler, itemCountHandler }) =>
   return (
     <div className='my-2 flex justify-center'>
       <button className='group-hover:bg-cyan-900/20' onClick={removeItemHandler}>-</button>
-      <input className='mx-2 w-8 text-black text-center rounded' type="text" value={itemCountHandler} />
+      <input className='mx-2 w-8 text-black text-center rounded' type="text" value={itemCountHandler} readOnly />
       <button className='group-hover:bg-cyan-900/20' onClick={addItemHandler}>+</button>
     </div>
   )

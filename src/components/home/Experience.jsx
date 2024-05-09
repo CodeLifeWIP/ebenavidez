@@ -18,7 +18,7 @@ const Experience = ({ data, className }) => {
     <ul>
       {
         info.map((i, index) => {
-          return <li key={index} className="mb-4 pb-4" >
+          return <li key={i.title + index} className="mb-4 pb-4" >
             <div className="py-2 text-slate-400 text-sm">{i.date}</div>
             <div className='py-2 flex group'>
               <a href='https://google.com' className="text-white text-base group-hover:text-teal-300">{i.company}</a>
@@ -44,8 +44,8 @@ const Experience = ({ data, className }) => {
     <StickyTitle title="Experience" />
     <ul>
       {
-        info.map((i) => {
-          return <li key={i.title} className="grid grid-cols-4 my-8" >
+        info.map((i, index) => {
+          return <li key={i.title + index} className="grid grid-cols-4 my-8" >
             <div className="text-slate-400 text-sm">{i.date}</div>
             <div className="col-span-3">
               <div className='flex group'>
@@ -73,8 +73,8 @@ const Experience = ({ data, className }) => {
     <StickyTitle title="Experience" className='lg:hidden' />
     <ul>
       {
-        info.map((i) => {
-          return <li key={i.title} className="grid grid-cols-3 mb-4 py-4 px-4 group hover:pt-3.5 hover:bg-slate-500/10 hover:border-t-2 hover:border-double hover:border-slate-200/10 hover:rounded-lg" >
+        info.map((i, index) => {
+          return <li key={i.title + index} className="grid grid-cols-3 mb-4 py-4 px-4 group hover:pt-3.5 hover:bg-slate-500/10 hover:border-t-2 hover:border-double hover:border-slate-200/10 hover:rounded-lg" >
             <div className="text-slate-400 text-sm">{i.date}</div>
             <div className="col-span-2">
               <div className='flex'>
@@ -102,8 +102,8 @@ const Experience = ({ data, className }) => {
     <StickyTitle title="Experience" className='xl:hidden' />
     <ul>
       {
-        info.map((i) => {
-          return <li key={i.title} className='grid grid-cols-3 mb-4 py-4 px-4 group hover:pt-3.5 hover:bg-slate-500/10 hover:border-t-2 hover:border-double hover:border-slate-200/10 hover:rounded-lg' >
+        info.map((i, index) => {
+          return <li key={i.title + index} className='grid grid-cols-3 mb-4 py-4 px-4 group hover:pt-3.5 hover:bg-slate-500/10 hover:border-t-2 hover:border-double hover:border-slate-200/10 hover:rounded-lg' >
             <div className="text-slate-400 text-sm">{i.date}</div>
             <div className="col-span-2">
               <div className='flex'>

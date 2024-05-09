@@ -1,6 +1,3 @@
-/* eslint-disable react/prop-types */
-import { useEffect } from 'react'
-
 // eslint-disable-next-line react/prop-types
 const StickyTitle = ({ className, title }) => {
   return (
@@ -12,14 +9,6 @@ const StickyTitle = ({ className, title }) => {
 
 // eslint-disable-next-line react/prop-types
 const StickyTitleWithCart = ({ className, title, cartTotal, checkoutButton }) => {
-
-  useEffect(() => {
-    console.log(`StickyTitleWithCart: ${cartTotal}`)
-  }, [])
-
-  useEffect(() => {
-    console.log(`StickyTitleWithCart: ${cartTotal}`)
-  }, [cartTotal])
 
   return (
     <div className={`sticky h-14 top-0 flex justify-between bg-slate-900/90 xl:bg-transparent ${className}`}>

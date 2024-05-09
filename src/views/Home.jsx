@@ -1,14 +1,20 @@
 import { useState, useEffect, useRef } from 'react'
 import Hero from '../components/home/Hero'
 import TableContents from '../components/home/TableContents'
-import { useSelector } from 'react-redux'
 import About from '../components/home/About'
 import Experience from '../components/home/Experience'
 import Project from '../components/home/Project'
 import Products from '../components/home/Products'
 import Footer from '../components/home/Footer'
+import { useDispatch } from 'react-redux'
+import { tableContentsActions } from '../store/tableContents'
 
-
+const info = {
+  name: 'Ethel Benavidez',
+  title: 'Software Engineer',
+  position: 'Full-stack, Mobile, and API Developer',
+  intro: '',
+}
 
 const experiences = [
   {
@@ -84,19 +90,10 @@ const products = [
 
 const Home = () => {
   const [mousePos, setMousePos] = useState({})
-  const active = useSelector((state) => state.tableContents.active)
-  const cartTotalAmount = useSelector((state) => state.cart.cartTotalAmount)
   const secondaryCursor = useRef(null)
+  const dispatch = useDispatch()
 
-
-  useEffect(() => {
-    // console.log(`state.active: ${active}`)
-  }, [active])
-
-  useEffect(() => {
-    // console.log(`cart: ${JSON.stringify(cartTotalAmount)}`)
-  }, [cartTotalAmount])
-
+  // Follow mouse movement
   useEffect(() => {
     const handleMouseMove = (event) => {
       setMousePos({ x: event.clientX, y: event.clientY })
@@ -112,8 +109,9 @@ const Home = () => {
     }
   })
 
+  // follow mouse movement
   useEffect(() => {
-    secondaryCursor.current.style.transform = `translate3d(${mousePos.x - 200}px, ${mousePos.y}px, 0)`
+    secondaryCursor.current.style.transform = `translate3d(${mousePos.x - 100}px, ${mousePos.y}px, 0)`
   }, [mousePos])
 
   const lgPageLayout = 'lg:flex lg:justify-between lg:h-screen lg:overflow-y-hidden lg:w-full lg:grid lg:grid-cols-2'
@@ -123,23 +121,26 @@ const Home = () => {
   return (
     <div className='bg-slate-900 xl:h-screen xl:relative xl:z-0 xl:flex'>
       <div ref={secondaryCursor} className='hidden xl:block w-36 h-36 bg-blue-500 blur-extra' />
-      <div ref={secondaryCursor} className='hidden xl:block w-36 h-36 bg-indigo-600 blur-extra' />
 
       <div className={`xl:absolute xl:z-10 ${lgPageLayout}`}>
+
         <div className="">
-          <Hero className={`mb-32 sm:mb-52 md:mb-40 lg:mb-0 ${leftPageMargin}`} />
+          <Hero data={info} className={`mb-32 sm:mb-52 md:mb-40 lg:mb-0 ${leftPageMargin}`} />
           <TableContents className={`hidden lg:block ${leftPageMargin}`} />
         </div>
-        <div className="scroll-smooth lg:h-screen lg:overflow-y-auto">
+
+        <div className="scroll-smooth lg:h-screen lg:overflow-y-auto" onWheel={(e) => dispatch(tableContentsActions.setIsManuallyScrolling(true))} >
           <About className={rightPageMargin} />
           <Experience data={experiences} className={rightPageMargin} />
           <Project data={projects} className={rightPageMargin} />
-          {/* <Products data={products} className={`hidden lg:block ${rightPageMargin}`} /> */}
+          <Products data={products} className={`hidden lg:hidden ${rightPageMargin}`} />
           <Footer className={`hidden lg:block ${rightPageMargin}`} />
         </div>
-        {/* <Products data={products} className={`block lg:hidden ${rightPageMargin}`} /> */}
+
+        <Products data={products} className={`hidden lg:hidden ${rightPageMargin}`} />
         <Footer className={`block lg:hidden ${rightPageMargin}`} />
       </div>
+
     </div>
   )
 }
