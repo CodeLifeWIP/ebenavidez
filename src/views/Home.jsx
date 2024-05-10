@@ -11,10 +11,15 @@ import { tableContentsActions } from '../store/tableContents'
 
 const info = {
   name: 'Ethel Benavidez',
-  title: 'Software Engineer',
-  position: 'Full-stack, Mobile, and API Developer',
+  title: 'Software Developer',
+  position: 'Full-stack | Mobile | API',
   intro: '',
 }
+
+const about = <p>A full stack and mobile developer with 8 years of experience and a Bachelors Degree in Information Technology.
+  Developed, maintained and optimized Web, RESTful API applications using PHP on a Laravel framework, MySQL, Javascript along with various other technologies.With experience in TDD, mobile development using Java for android applications and Flutter, implementing 3rd party APIs, Git as version control and servers on AWS.
+  Writes code in clean, efficient and maintainable manner.With experience in testing, implementing 3rd party APIs, Git and SVN as version control and servers on AWS.
+  Result - driven, articulate, analytical, and comfortable to think outside the box.Passionate in problem solving, learning new technologies and optimization.Comfortable working with a team and with minimal supervision required.</p>
 
 const experiences = [
   {
@@ -130,7 +135,7 @@ const Home = () => {
         </div>
 
         <div className="scroll-smooth lg:h-screen lg:overflow-y-auto" onWheel={(e) => dispatch(tableContentsActions.setIsManuallyScrolling(true))} >
-          <About className={rightPageMargin} />
+          <About data={about} className={rightPageMargin} />
           <Experience data={experiences} className={rightPageMargin} />
           <Project data={projects} className={rightPageMargin} />
           <Products data={products} className={`hidden lg:hidden ${rightPageMargin}`} />
