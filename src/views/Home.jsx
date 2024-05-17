@@ -60,7 +60,7 @@ const experiences = [
 const projects = [
   {
     title: 'Title 1',
-    image: 'public/img/stock.jpg',
+    image: './img/stock.jpg',
     detail: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
     stackList: ['Kotlin', 'Java', 'Laravel', 'Codeigniter', 'HTML', 'CSS', 'Javascript', 'MySQL', 'Firebase', 'GIT'],
     techList: ['TDD', 'CI/CD', 'Clean Architecture'],
@@ -68,7 +68,7 @@ const projects = [
   },
   {
     title: 'Title 2',
-    image: 'public/img/stock.jpg',
+    image: './img/stock.jpg',
     detail: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
     stackList: ['Kotlin', 'Java', 'Laravel', 'Codeigniter', 'HTML', 'CSS', 'Javascript', 'MySQL', 'Firebase', 'GIT'],
     techList: ['TDD'],
@@ -77,9 +77,9 @@ const projects = [
 ]
 
 const products = [
-  { id: 1, title: 'Coffee', image: 'public/img/stock.jpg', price: '250', qty: 0 },
-  { id: 2, title: 'Coffee and snack', image: 'public/img/stock.jpg', price: '500', qty: 0 },
-  { id: 3, title: 'Dinner', image: 'public/img/stock.jpg', price: '1000', qty: 0 },
+  { id: 1, title: 'Coffee', image: './img/stock.jpg', price: '250', qty: 0 },
+  { id: 2, title: 'Coffee and snack', image: './img/stock.jpg', price: '500', qty: 0 },
+  { id: 3, title: 'Dinner', image: './img/stock.jpg', price: '1000', qty: 0 },
 ]
 
 const Home = () => {
