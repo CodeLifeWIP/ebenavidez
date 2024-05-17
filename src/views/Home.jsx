@@ -16,40 +16,42 @@ const info = {
   intro: '',
 }
 
+const about = 'A full stack and mobile developer with 8 years of experience and a Bachelors Degree in Information Technology. Developed, maintained and optimized Web, RESTful API applications using PHP on a Laravel framework, MySQL, Javascript along with various other technologies. With experience in TDD, mobile development using Java for android applications and Flutter, implementing 3rd party APIs, Git as version control and servers on AWS. Writes code in clean, efficient and maintainable manner. Result-driven, articulate, analytical, and comfortable to think outside the box. Passionate in problem solving, learning new technologies and optimization. Comfortable working with a team and with minimal supervision required. Worked with multiple nationalities based on multiple countries and timezones.'
+
 const experiences = [
   {
     date: '2023 - Present',
     company: 'iNeedParking Technologies Corp',
     title: 'Software Engineer',
     position: 'Mobile Developer',
-    detail: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
+    detail: 'Design, develop and test mobile applications written in Flutter/Dart. Co- design UI / UX and mobile application flow. Give advice to stakeholders about technical matters relating to software application development designing and process.',
     skill: ['Flutter', 'Dart', 'Firebase', 'MySQL', 'GIT'],
-    link: '',
+    link: 'https://ineed.com.ph/',
   },
   {
     date: '2022 - 2023',
     company: 'VIPESO, Inc.',
     title: 'Software Engineer',
     position: 'Mobile Developer',
-    detail: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
+    detail: 'Develop, maintain, test and deploy APIs and mobile applications following software engineering best practices and principles to ensure testability, maintainability and scalability of the application. Collaborate with cross - functional teams, from multiple countries to define, design, review, and ship new  features.',
     skill: ['Flutter', 'Dart', 'Kotlin', 'Laravel', 'MySQL', 'GIT', 'SVN'],
-    link: '',
+    link: 'https://www.linkedin.com/company/vipeso/',
   },
   {
     date: '2018 - 2022',
     company: 'Zagro Singapore Pte Ltd',
     title: 'Software Engineer',
     position: 'Fullstack Web Developer',
-    detail: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
+    detail: 'Design, develop and maintain web and e-commerce applications and APIs following software engineering best practices and principles to ensure scalability, maintainability and readability of the software. Bug fixing, maintaining and updating application performance.Making sure that  bugs and fixes are well documented, data is current and new features are  delivered within the agreed upon time frame. Collaborate with cross - functional teams, from multiple countries to define, design, review, and ship new  features. Redesign, upgrade and refactor older applications to follow software engineering best practices. Optimize performance of software applications. Design, implement and enhance software development procedures for the team',
     skill: ['Laravel', 'HTML', 'CSS', 'Javascript', 'MySQL', 'AWS', 'GIT'],
-    link: '',
+    link: 'https://www.zagro.com/',
   },
   {
     date: '2015 - 2017',
     company: 'MSG (Tech start-up)',
     title: 'Software Engineer',
     position: 'Mobile Developer | FullStack Web Developer | API Developer',
-    detail: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
+    detail: 'Design and develop advanced applications for the Android and Web platform following software engineering best practices and principles to ensure scalability,  maintainability and readability of the software. Design and develop back- end services and database using established design  principles to create a solid, well - designed and secure systems.Leveraging the  power of the database for speed and data integrity. Bug fixing, maintaining and updating application performance.Making sure that  bugs and fixes are well documented, data is current and new features are  delivered within the agreed upon time frame. Collaborate with cross - functional teams to define, design, review, and ship new features. Learn new technologies, frameworks and APIs applicable to the needs and  requirements of the client. Documentation, daily reports and scrum.Keeping track of all the aspects of the  application and its development.Ensuring that tasks are planned accordingly and  completed in time.',
     skill: ['Kotlin', 'Java', 'Laravel', 'Codeigniter', 'HTML', 'CSS', 'Javascript', 'MySQL', 'Firebase', 'GIT'],
     link: '',
   },
@@ -70,14 +72,6 @@ const projects = [
     detail: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
     stackList: ['Kotlin', 'Java', 'Laravel', 'Codeigniter', 'HTML', 'CSS', 'Javascript', 'MySQL', 'Firebase', 'GIT'],
     techList: ['TDD'],
-    link: '',
-  },
-  {
-    title: 'Title 3',
-    image: 'public/img/stock.jpg',
-    detail: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
-    stackList: ['Kotlin', 'Java', 'Laravel', 'Codeigniter', 'HTML', 'CSS', 'Javascript', 'MySQL', 'Firebase', 'GIT'],
-    techList: ['TDD', 'CI/CD'],
     link: '',
   },
 ]
@@ -130,7 +124,7 @@ const Home = () => {
         </div>
 
         <div className="scroll-smooth lg:h-screen lg:overflow-y-auto" onWheel={(e) => dispatch(tableContentsActions.setIsManuallyScrolling(true))} >
-          <About className={rightPageMargin} />
+          <About data={about} className={rightPageMargin} />
           <Experience data={experiences} className={rightPageMargin} />
           <Project data={projects} className={rightPageMargin} />
           <Products data={products} className={`hidden lg:hidden ${rightPageMargin}`} />
