@@ -59,20 +59,20 @@ const experiences = [
 
 const projects = [
   {
-    title: 'Title 1',
-    image: './img/stock.jpg',
-    detail: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
-    stackList: ['Kotlin', 'Java', 'Laravel', 'Codeigniter', 'HTML', 'CSS', 'Javascript', 'MySQL', 'Firebase', 'GIT'],
+    title: 'Video to Audio Downloader',
+    image: './img/vtad.webp',
+    detail: 'Seamless Video-to-Audio Conversion: Video to Audio Downloader revolutionizes the way you consume multimedia content by allowing you to extract the audio portion of a video effortlessly. Enjoy the audio essence of your favorite videos in a new and exciting way.',
+    stackList: ['Flutter', 'Firebase', 'Git / Git Actions'],
     techList: ['TDD', 'CI/CD', 'Clean Architecture'],
-    link: '',
+    link: 'https://play.google.com/store/apps/details?id=com.mangotechnologies.video_to_audio',
   },
   {
-    title: 'Title 2',
-    image: './img/stock.jpg',
-    detail: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
-    stackList: ['Kotlin', 'Java', 'Laravel', 'Codeigniter', 'HTML', 'CSS', 'Javascript', 'MySQL', 'Firebase', 'GIT'],
-    techList: ['TDD'],
-    link: '',
+    title: 'Personal Website v1',
+    image: './img/ebenavidez.jpg',
+    detail: 'This is the first iteration of my personal website built with vanilla React, Redux and styled with TailwindCSS',
+    stackList: ['React', 'Tailwind', 'GIT'],
+    techList: [],
+    link: 'http://ebenavidez.mymangotechnologies.com',
   },
 ]
 
