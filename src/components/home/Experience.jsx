@@ -21,7 +21,7 @@ const Experience = ({ data, className }) => {
           return <li key={i.title + index} className="mb-4 pb-4" >
             <div className="py-2 text-slate-400 text-sm">{i.date}</div>
             <div className='py-2 flex group'>
-              <a href='https://google.com' className="text-white text-base group-hover:text-teal-300">{i.company}</a>
+              <a href={i.date} className="text-white text-base group-hover:text-teal-300">{i.company}</a>
               <span className='pl-1 text-white text-xs inline-block content-end group-hover:content-start group-hover:pl-2'>
                 <ArrowUpRightIcon className="h-5 w-5 text-white text-base group-hover:text-teal-300" />
               </span>
@@ -49,7 +49,7 @@ const Experience = ({ data, className }) => {
             <div className="text-slate-400 text-sm">{i.date}</div>
             <div className="col-span-3">
               <div className='flex group'>
-                <a href='https://google.com' className="text-white text-base group-hover:text-teal-300">{i.company}</a>
+                <a href={i.date} className="text-white text-base group-hover:text-teal-300">{i.company}</a>
                 <span className='pl-1 text-white text-xs inline-block content-end group-hover:content-start group-hover:pl-2'>
                   <ArrowUpRightIcon className="h-5 w-5 text-white text-base group-hover:text-teal-300" />
                 </span>
@@ -78,7 +78,7 @@ const Experience = ({ data, className }) => {
             <div className="text-slate-400 text-sm">{i.date}</div>
             <div className="col-span-2">
               <div className='flex'>
-                <a href='https://google.com' className="text-white text-base group-hover:text-teal-300">{i.company}</a>
+                <a href={i.date} className="text-white text-base group-hover:text-teal-300">{i.company}</a>
                 <span className='pl-1 text-white text-xs inline-block content-end group-hover:content-start group-hover:pl-2'>
                   <ArrowUpRightIcon className="h-5 w-5 text-white text-base group-hover:text-teal-300" />
                 </span>
@@ -107,7 +107,7 @@ const Experience = ({ data, className }) => {
             <div className="text-slate-400 text-sm">{i.date}</div>
             <div className="col-span-2">
               <div className='flex'>
-                <a href='https://google.com' className="text-white text-base group-hover:text-teal-300">{i.company}</a>
+                <a href={i.date} className="text-white text-base group-hover:text-teal-300">{i.company}</a>
                 <span className='pl-1 text-white text-xs inline-block content-end group-hover:content-start group-hover:pl-2'>
                   <ArrowUpRightIcon className="h-5 w-5 text-white text-base group-hover:text-teal-300" />
                 </span>

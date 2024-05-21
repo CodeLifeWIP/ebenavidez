@@ -21,7 +21,7 @@ const Project = ({ data, className }) => {
           return <li key={i.title + index} className="mb-4 pb-4 xl:hover:bg-cyan-900/20" >
             <img src={i.image} alt={'image of ' + i.title} />
             <div className='py-2 flex group'>
-              <a href='https://google.com' className="text-white text-base group-hover:text-teal-300">{i.title}</a>
+              <a href={i.date} className="text-white text-base group-hover:text-teal-300">{i.title}</a>
               <span className='pl-1 text-white text-xs inline-block content-end group-hover:content-start group-hover:pl-2'>
                 <ArrowUpRightIcon className="h-5 w-5 text-white text-base group-hover:text-teal-300" />
               </span>
@@ -52,7 +52,7 @@ const Project = ({ data, className }) => {
             <img className='sm:flex-none sm:object-scale-down sm:h-28' src={i.image} alt={'image of ' + i.title} />
             <div className='sm:block sm:flex-initial sm:pl-8'>
               <div className='py-2 flex group sm:py-0 sm:pb-1'>
-                <a href='https://google.com' className="text-white text-base group-hover:text-teal-300">{i.title}</a>
+                <a href={i.date} className="text-white text-base group-hover:text-teal-300">{i.title}</a>
                 <span className='pl-1 text-white text-xs inline-block content-end group-hover:content-start group-hover:pl-2'>
                   <ArrowUpRightIcon className="h-5 w-5 text-white text-base group-hover:text-teal-300" />
                 </span>
@@ -84,7 +84,7 @@ const Project = ({ data, className }) => {
             <img className='md:flex-none md:object-scale-down md:h-52' src={i.image} alt={'image of ' + i.title} />
             <div className='md:block md:flex-initial md:pl-8'>
               <div className='py-2 flex group md:py-0 md:pb-1'>
-                <a href='https://google.com' className="text-white text-base group-hover:text-teal-300">{i.title}</a>
+                <a href={i.date} className="text-white text-base group-hover:text-teal-300">{i.title}</a>
                 <span className='pl-1 text-white text-xs inline-block content-end group-hover:content-start group-hover:pl-2'>
                   <ArrowUpRightIcon className="h-5 w-5 text-white text-base group-hover:text-teal-300" />
                 </span>
@@ -116,7 +116,7 @@ const Project = ({ data, className }) => {
             <img className='object-scale-down' src={i.image} alt={'image of ' + i.title} />
             <div className='col-span-2 flex-initial pl-4'>
               <div className='py-2 flex md:py-0 md:pb-1'>
-                <a href='https://google.com' className="text-white text-base group-hover:text-teal-300">{i.title}</a>
+                <a href={i.date} className="text-white text-base group-hover:text-teal-300">{i.title}</a>
                 <span className='pl-1 text-white text-xs inline-block content-end group-hover:content-start group-hover:pl-2'>
                   <ArrowUpRightIcon className="h-5 w-5 text-white text-base group-hover:text-teal-300" />
                 </span>
@@ -148,7 +148,7 @@ const Project = ({ data, className }) => {
             <img className='object-scale-down' src={i.image} alt={'image of ' + i.title} />
             <div className='col-span-2 flex-initial pl-4'>
               <div className='py-2 flex md:py-0 md:pb-1'>
-                <a href='https://google.com' className="text-white text-base group-hover:text-teal-300">{i.title}</a>
+                <a href={i.date} className="text-white text-base group-hover:text-teal-300">{i.title}</a>
                 <span className='pl-1 text-white text-xs inline-block content-end group-hover:content-start group-hover:pl-2'>
                   <ArrowUpRightIcon className="h-5 w-5 text-white text-base group-hover:text-teal-300" />
                 </span>
