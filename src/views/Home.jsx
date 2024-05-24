@@ -1,6 +1,7 @@
 import { useState, useEffect, useRef } from 'react'
 import Hero from '../components/home/Hero'
 import TableContents from '../components/home/TableContents'
+import Socials from '../components/home/Socials'
 import About from '../components/home/About'
 import Experience from '../components/home/Experience'
 import Project from '../components/home/Project'
@@ -109,19 +110,23 @@ const Home = () => {
   }, [mousePos])
 
   const lgPageLayout = 'lg:flex lg:justify-between lg:h-screen lg:overflow-y-hidden lg:w-full lg:grid lg:grid-cols-2'
-  const leftPageMargin = 'mx-6 my-10 md:mx-16 md:my-20 lg:mr-0 lg:ml-24 lg:mt-24 xl:ml-40 xl:mt-28'
+  const leftPageMarginX = 'mx-6 md:mx-16 lg:mr-0 lg:ml-24 xl:ml-40'
   const rightPageMargin = 'mx-6 my-10 md:mx-16 md:my-20 lg:ml-0 lg:mr-24 lg:my-0 lg:pt-24 xl:mr-40 xl:my-0 xl:pt-28'
+
+  const leftPageMarginY = 'lg:mt-24 xl:mt-28'
 
   return (
     <div className='bg-slate-900 xl:h-screen xl:relative xl:z-0 xl:flex'>
       <div ref={secondaryCursor} className='hidden xl:block w-36 h-36 bg-blue-500 blur-extra' />
 
       <div className={`xl:absolute xl:z-10 ${lgPageLayout}`}>
-
         <div className="">
-          <Hero data={info} className={`mb-32 sm:mb-52 md:mb-40 lg:mb-0 ${leftPageMargin}`} />
-          <TableContents className={`hidden lg:block ${leftPageMargin}`} />
+          <Hero data={info} className={`mt-10 ${leftPageMarginX} ${leftPageMarginY}`} />
+          <TableContents className={`hidden lg:block ${leftPageMarginX} ${leftPageMarginY}`} />
+          <Socials className={`text-slate-400 flex mt-5 mb-40 ${leftPageMarginX}  ${leftPageMarginY}`} />
         </div>
+
+        {/* sm:mb-52 md:mb-40 lg:my-0 */}
 
         <div className="scroll-smooth lg:h-screen lg:overflow-y-auto" onWheel={(e) => dispatch(tableContentsActions.setIsManuallyScrolling(true))} >
           <About data={about} className={rightPageMargin} />
