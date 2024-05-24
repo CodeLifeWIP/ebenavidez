@@ -44,7 +44,7 @@ const Project = ({ data, className }) => {
   </div>
 
   const smComponents = <div id='Projects' className={className}>
-    <StickyTitle title="Project" />
+    <StickyTitle title="Projects" />
     <ul>
       {
         info.map((i, index) => {
@@ -76,13 +76,13 @@ const Project = ({ data, className }) => {
   </div>
 
   const mdComponents = <div id='Projects' className={className}>
-    <StickyTitle title="Project" />
+    <StickyTitle title="Projects" />
     <ul>
       {
         info.map((i, index) => {
-          return <li key={i.title + index} className="md:flex md:my-4 md:py-4" >
-            <img className='md:flex-none md:object-scale-down md:h-52' src={i.image} alt={'image of ' + i.title} />
-            <div className='md:block md:flex-initial md:pl-8'>
+          return <li key={i.title + index} className="grid grid-cols-3 mb-4 py-4 pr-4" >
+            <img className='object-scale-down' src={i.image} alt={'image of ' + i.title} />
+            <div className='col-span-2 flex-initial pl-4'>
               <div className='py-2 flex group md:py-0 md:pb-1'>
                 <a href={i.date} className="text-white text-base group-hover:text-teal-300">{i.title}</a>
                 <span className='pl-1 text-white text-xs inline-block content-end group-hover:content-start group-hover:pl-2'>
@@ -108,12 +108,13 @@ const Project = ({ data, className }) => {
   </div>
 
   const lgComponents = <div id='Projects' className={className}>
-    <StickyTitle title="Project" className='lg:hidden' />
+    <StickyTitle title="Projects" className='lg:hidden' />
     <ul>
       {
         info.map((i, index) => {
           return <li key={i.title + index} className="grid grid-cols-3 mb-4 py-4 px-4 group hover:pt-3.5 hover:bg-slate-500/10 hover:border-t-2 hover:border-double hover:border-slate-200/10 hover:rounded-lg" >
             <img className='object-scale-down' src={i.image} alt={'image of ' + i.title} />
+
             <div className='col-span-2 flex-initial pl-4'>
               <div className='py-2 flex md:py-0 md:pb-1'>
                 <a href={i.date} className="text-white text-base group-hover:text-teal-300">{i.title}</a>
@@ -122,6 +123,7 @@ const Project = ({ data, className }) => {
                 </span>
               </div>
               <div className="text-slate-400 text-sm mb-3 text-justify">{i.detail}</div>
+
               <ul className="flex flex-wrap">
                 {i.stackList.map((i2) => {
                   return <li key={i2.toString()} className="mr-2 mb-2 flex items-center rounded-full bg-teal-400/10 px-3 py-1 text-xs font-medium leading-5 text-teal-300">{i2}</li>
@@ -174,7 +176,8 @@ const Project = ({ data, className }) => {
 
   return (
     <>
-      {(sm && !lg) && smComponents}
+      {(sm && !md && !lg) && smComponents}
+      {(sm && md && !lg) && mdComponents}
       {(lg && !xl) && lgComponents}
       {(xl) && xlComponents}
       {(!sm && !md && !lg && !xl) && mobileComponents}
