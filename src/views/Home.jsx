@@ -123,10 +123,8 @@ const Home = () => {
         <div className="">
           <Hero data={info} className={`mt-10 ${leftPageMarginX} ${leftPageMarginY}`} />
           <TableContents className={`hidden lg:block ${leftPageMarginX} ${leftPageMarginY}`} />
-          <Socials className={`text-slate-400 flex mt-5 mb-40 ${leftPageMarginX}  ${leftPageMarginY}`} />
+          <Socials className={`mt-5 mb-40 ${leftPageMarginX}  ${leftPageMarginY}`} />
         </div>
-
-        {/* sm:mb-52 md:mb-40 lg:my-0 */}
 
         <div className="scroll-smooth lg:h-screen lg:overflow-y-auto" onWheel={(e) => dispatch(tableContentsActions.setIsManuallyScrolling(true))} >
           <About data={about} className={rightPageMargin} />

@@ -6,10 +6,10 @@ GithubIcon
 const Socials = ({ className }) => {
 
   return (
-    <div className={`${className}`}>
-      <a href='https://github.com/ebenavidez'><GithubIcon className='h-6 w-6 mr-2' /></a>
-      <a href='https://github.com/CodeLifeWIP'><GithubIcon className='h-6 w-6 mx-2' /></a>
-      <a href='https://www.linkedin.com/in/e-benavidez-4310271bb/'><LinkedInIcon className='h-6 w-6 mx-2' /></a>
+    <div className={`flex text-slate-400 ${className}`}>
+      <a href='https://github.com/ebenavidez' className='hover:text-white'><GithubIcon className='h-6 w-6 mr-2' /></a>
+      <a href='https://github.com/CodeLifeWIP' className='hover:text-white'><GithubIcon className='h-6 w-6 mx-2' /></a>
+      <a href='https://www.linkedin.com/in/e-benavidez-4310271bb/' className='hover:text-white'><LinkedInIcon className='h-6 w-6 mx-2' /></a>
     </div>
   )
 }
