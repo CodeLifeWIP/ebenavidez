@@ -21,7 +21,16 @@ const about = 'A full stack and mobile developer with 8 years of experience and 
 
 const experiences = [
   {
-    date: '2023 - Present',
+    date: '2024 - Present',
+    company: 'Freelance',
+    title: 'Full Stack Developer',
+    // position: 'Mobile Developer',
+    // detail: 'Design, develop and test mobile applications written in Flutter/Dart. Co- design UI / UX and mobile application flow. Give advice to stakeholders about technical matters relating to software application development designing and process.',
+    skill: ['React-Javascript', 'Laravel-PHP', 'TailwindCSS', 'AWS', 'GCP', 'Github-GIT'],
+    // link: 'https://ineed.com.ph/',
+  },
+  {
+    date: '2023 - 2024',
     company: 'iNeedParking Technologies Corp',
     title: 'Software Engineer',
     position: 'Mobile Developer',
