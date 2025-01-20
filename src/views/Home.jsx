@@ -29,7 +29,7 @@ const experiences = [
     title: 'Full Stack Developer',
     // position: 'Mobile Developer',
     detail: 'Extensive experience in designing, developing, and testing web applications using React.js, along with strong proficiency in TypeScript and Next.js. Expertise in styling web applications with TailwindCSS, ensuring seamless alignment with Figma designs to create visually appealing and responsive user interfaces. Successfully collaborated with cross-functional teams from multiple countries, leveraging communication and teamwork skills to deliver high-quality, scalable solutions that meet diverse user needs. Adaptability to various workflows and alignment with global teams ensures a smooth development process and a commitment to excellence.',
-    skill: ['React-Javascript', 'Laravel-PHP', 'TailwindCSS', 'AWS', 'GCP', 'Github-GIT'],
+    skill: ['React', 'Laravel', 'TailwindCSS', 'TypeScript', 'Next', 'AWS', 'GCP', 'GIT'],
     // link: 'https://ineed.com.ph/',
   },
   {
