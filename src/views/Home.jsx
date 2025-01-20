@@ -17,11 +17,23 @@ const info = {
   intro: '',
 }
 
-const about = 'A full stack and mobile developer with 8 years of experience and a Bachelors Degree in Information Technology. Developed, maintained and optimized Web, RESTful API applications using PHP on a Laravel framework, MySQL, Javascript along with various other technologies. With experience in TDD, mobile development using Java for android applications and Flutter, implementing 3rd party APIs, Git as version control and servers on AWS. Writes code in clean, efficient and maintainable manner. Result-driven, articulate, analytical, and comfortable to think outside the box. Passionate in problem solving, learning new technologies and optimization. Comfortable working with a team and with minimal supervision required. Worked with multiple nationalities based on multiple countries and timezones.'
+//const about1 = 'A full stack and mobile developer with 8 years of experience and a Bachelors Degree in Information Technology. Developed, maintained and optimized Web, RESTful API applications using PHP on a Laravel framework, MySQL, Javascript along with various other technologies. With experience in TDD, mobile development using Java for android applications and Flutter, implementing 3rd party APIs, Git as version control and servers on AWS. Writes code in clean, efficient and maintainable manner. Result-driven, articulate, analytical, and comfortable to think outside the box. Passionate in problem solving, learning new technologies and optimization. Comfortable working with a team and with minimal supervision required. Worked with multiple nationalities based on multiple countries and timezones.'
+const about = `A versatile Full Stack and Mobile Developer with 9 years of experience and a Bachelor's Degree in Information Technology.
+Expert in developing, maintaining, and optimizing web applications and RESTful APIs using PHP on the Laravel framework, MySQL, and JavaScript, along with a strong command of modern technologies such as React, TypeScript, Next.js, and TailwindCSS. Experienced in Test- Driven Development (TDD), mobile development using Kotlin for native Android applications, and Flutter for cross-platform solutions. Proficient in integrating 3rd-party APIs, utilizing Git for version control, and managing servers on AWS and GCP.
+Dedicated to writing clean, efficient, and maintainable code while being results-driven, articulate, and analytical. Adept at thinking outside the box, solving complex problems, and optimizing processes. Passionate about learning new technologies and delivering high-quality solutions. Thrives in multinational teams, working with minimal supervision, and contributing effectively to collaborative projects.`
 
 const experiences = [
   {
-    date: '2023 - Present',
+    date: '2024 - Present',
+    company: 'Freelancing Work',
+    title: 'Full Stack Developer',
+    // position: 'Full Stack Developer',
+    detail: 'Extensive experience in designing, developing, and testing web applications using React.js, along with strong proficiency in TypeScript and Next.js. Expertise in styling web applications with TailwindCSS, ensuring seamless alignment with Figma designs to create visually appealing and responsive user interfaces. Successfully collaborated with cross-functional teams from multiple countries, leveraging communication and teamwork skills to deliver high-quality, scalable solutions that meet diverse user needs. Adaptability to various workflows and alignment with global teams ensures a smooth development process and a commitment to excellence.',
+    skill: ['React', 'TypeScript', 'Next', 'Tailwind', 'GIT'],
+    link: '',
+  },
+  {
+    date: '2023 - 2024',
     company: 'iNeedParking Technologies Corp',
     title: 'Software Engineer',
     position: 'Mobile Developer',
